@@ -1,0 +1,171 @@
+Flow:
+Ethereum 
+Ethereum Accounts
+Smart Contracts
+EVM
+Practically deploying Ethereum blockchain locally
+
+Why Ethereum???
+blockchain could be used for various used cases instead of just focussing on financial transactions.
+Ethreum maximises the usage of practical blockchain applications
+Ethreum is an open source distributed platform allowing decentralising apps to be built on it with the help of Smart Contracts. Made by Vitalik 
+give an analogy: renting house. whenever the distributed network is updated due to the smart contract where code execution occurs
+
+how ethereum differs from bitcoin:
+bitcoin aims at decentalised money not governed by anyone. bitcoin comes under blockchain 1.0- 1st generation of blockchain
+ethereum extends itself a bit more than just a cryptocurrency. Ethereum comes under blockchain 2.0- 2nd generation of blockchain
+bitcoin is turing incomplete, simple stack based language while ethereum is tuing complete - can solve any computational problem given time and energy
+bitcoin uses sha256, ethereum uses ethash , will use proof of stake, miners are chosen based on how wealthy.
+ethereum was released through ico raised coins for cryptocurrency.
+
+types of ethereum accounts:
+externally owned : owned by people or organisations. controlled by private keys
+contract accounts: autonomous in nature. controlled by code. (smart contracts) - triggered due to other external accounts or other smart contracts.
+
+users can create smart contracts by deploying code in the blockchain. 
+smart contracts are immutable pieces of code. once deployed on the blockchain and run, they act as self operating computer programs, which automatically executes when specific conditions are met. 
+
+these contracts are written in contract specific language called solidity, vyper. We would be talking about solidity. 
+
+why not already existing language?
+contract oriented languages' main aim is to implement smart contracts on the EVM for further execution of the code. 
+solidity syntax is similar to javascript
+it was developed cuz using the mainstream language on a blockchain would not really add value. also there are security requirements.
+as these codes once deployed, can't be changed again, so there is no concept of bug fixing. 
+also it costs money for executing instructions, so using C or any other language may result into huge costs for instructions(expensive contracts) that are run, and would not be easily understood as well.
+
+for development of smart contracts, online browser based IDE "remix" will be useful as it has an integrating  debugging and testing environment. A new line of code added in the IDE gets compiled automatically. We can specify the compiler versions as well.. 
+We have an environment that we can set, amount of ethers, account address, gas limit to be mentioned and the value in weis. 
+
+EVM: turing complete software, runs on Ethereum network. enables anyone to run the program irrespective of the programming language.
+Basically contracts written in contract specific programming language are compiled into bytecode, which can be read and executed by the EVM. 
+
+Working:
+A user requests 2 ethers from the sender. the sender initiates a transaction message code and must pay for each step of the program that they activated including the computations and the memory storage. 
+this fee is paid in ethers, which is taken from the wallet of the sender. 
+the transaction fee is collected by the nodes in the network that runs the evm.
+Each and every node of the network  runs the EVM to execute the same instructions. this is how blockchain is maintained and updated with the many nodes connected in the network. These nodes are the miner nodes that execute and verify the transactions that update the state of the accounts in the ethereum blockchain. they are rewarded with ethers for succesful mining.
+Once done, the user received 2 ethers in his wallet. 
+
+if EVM is running the application, then whats preventing the piece of code from running  forever and not overloading the network.?
+ethereum gas is the execution fee that the sender pays for running a program on the EVM. it acts as a crypto fuel driving the execution in the smart contract.
+every contract has to follow a gas limit which is the maximum amount of gas that can be consumed.
+ethgasstation in google. click on the first link. 
+
+gas price is specified at the start of initiating a transaction. 
+if the program requires more gas than the amount specified, the program may get reverted and also the gas will be lost. 
+
+Deploying smart contracts:
+
+test environment will be created in the ubuntu os.
+open terminal
+to run network, we need server so we need to install nodejs and npm as nodejs will simulate the server into our local machine.
+npm is command line interface program to run the nodejs libraries.
+sudo apt install nodejs
+sudo apt install npm
+nodejs --version
+npm --version
+we need newer version. 
+sudo apt install curl (transfers data from the server)
+curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+sudo apt install nodejs
+sudo npm upgrade npm -g 
+
+we need to run testrpc on our terminal to deploy and test our blockchain contract.
+testrpc is nodejs based ethereum client for testing and development
+so we need to create a testrpc client. 
+sudo npm install -g ganache-cli   sudo is used for the user to have authority over the files. 
+ganache cli works only on nodejs versions greater than 6.1
+sudo npm install -g ethereumjs-testrpc
+-> with this command we will add all node packages in our local machine. 
+testrpc 
+
+we will be able to see the accounts and private keys.
+open new terminal 
+install blockexplorer to help us keep track of the information on the blockchain
+we need to install git which is a distributed version control system which holds the repository of our block explorer here
+sudo apt install git
+git clone https://github.com/etherparty/explorer	-> repository of the cloud into our system
+cd explorer
+lauching blockexplorer -> sudo npm start -> it will install all the packages into our system
+go to the web browser and type the url in the above url that we got
+-> all the transactions are recorded in the block explorer
+
+go to remix ide to write the code:
+go to run: web3 provided
+click ok to connect to an ethereum node (in case of issue, run unsafe scripts)
+the associated accounts match with the accounts shown in testrpc
+
+pragma solidity ^0.4.1;  -> specifying the source code version. this version as it might not e supported in our system
+
+contract myContract{         -> contract will be written within this scope 
+      
+      uint256 counter = 5;  
+       -> we specify our state variable with value 5-> it creates a slot in the database that can be accessed whenever a function in the code is called.
+  
+      we defined it outside any function so that the variable can be accessed globally. 
+
+      function add() public {  -> the access modifier is public in both the function which is a default modifier. there are other access modifiers as well.
+         counter++;
+      }
+
+      function subtract() public {
+         counter--;
+      }
+
+      function getcounter() public constant returns(uint256) {
+      			return counter; -> no gas is required for returning a function 
+      }
+
+
+create button 
+functions appear.
+click on getcounter
+click add and then click on getcounter
+click subtract and click on getcounter
+
+go to blockexplorer
+
+
+everything is visible.
+
+Dapps -> set of smart contracts that operate on the data stored in those contracts.
+dapp has to fulfil the following conditions:
+1. opensource
+2. decentralised
+3. tokens fueling for itself
+4. generates token
+5. inbuilt consensus mechanism
+
+These dapps(decentralised application) enable direct interaction between users and providers
+these are comprised of various organisations that work together to create an application.
+these organisations are decentralised autonomous organisations (dao). very similar to a normal company where there is a third party and rules are not enforced digitally
+but DAOs make their decisions electronically through the codes written in the smart contract or through the vote of the members. 
+
+people add funds to the DAO and are given tokens to represent their percentage of assets.
+more investment more tokens one would hold
+when DAO begins to operate, members propose how to spend the funds and based on votes the proposal status is decided. hence no third party is there to be dependant on. 
+examples: WEIfund,4G capital, storj.io, kyc-chain.
+
+
+
+Now, being immutable, it is important to take care of the security of the smart contracts as once the contract is deployed, nothing can be changed. 
+Following are the points that should be taken into consideration:
+1. is the data public? 
+   - setting up the visibility of the state variables
+   		There are four visibilities of state variables : 
+   		public(accessible within the contracts, derived contracts,external parties, an automatic getter is generated so publically accessible), 
+   		internal(visibility within the contracts and also the derived ones, no getters are generated for external accessibility), 
+   		private(visible exclusively in the contract and not in derived contracts), 
+   		external
+
+
+Note: private and internal prevents other contracts from accessing and modifying the state variable but is still visible outside the blockchain
+The values in Ethereum state tree are stored in bytes32-hex values which are 64 characters long, corresponding to 32 bytes of storage
+
+Lets deal with the smartness of the contracts:
+Does your smart contract and the parameters behave as expected??
+-> A smart contract consists of code which should be having certain conditions to be fulfilled 
+and those conditions need to be followed in a proper order. It should be checked if any condition is getting followed wihout the previous condition being properly followed. 
+
+For example, balance should be deducted only when the previous condition is met. and when the amount is sent to the receiver. 
