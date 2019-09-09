@@ -1,10 +1,16 @@
-Flow:
-Ethereum 
-Ethereum Accounts
-Smart Contracts
-EVM
-Practically deploying Ethereum blockchain locally
+This post consists of all information that I know about the subject and what I understand. 
 
+The Flow that I will be following is :
+What is Ethereum?
+Why have we come up with the thought of Ethereum?
+What are Accounts?
+Different types of Ethereum Accounts
+What are Smart Contracts?
+Why do we need to have Smart Contracts?
+What is EVM(Ethereum Virtual Machine)
+What is gas, soldidity, ether, token and many more
+
+What is Ethereum?
 Why Ethereum???
 blockchain could be used for various used cases instead of just focussing on financial transactions.
 Ethreum maximises the usage of practical blockchain applications
@@ -96,37 +102,6 @@ go to run: web3 provided
 click ok to connect to an ethereum node (in case of issue, run unsafe scripts)
 the associated accounts match with the accounts shown in testrpc
 
-pragma solidity ^0.4.1;  -> specifying the source code version. this version as it might not e supported in our system
-
-contract myContract{         -> contract will be written within this scope 
-      
-      uint256 counter = 5;  
-       -> we specify our state variable with value 5-> it creates a slot in the database that can be accessed whenever a function in the code is called.
-  
-      we defined it outside any function so that the variable can be accessed globally. 
-
-      function add() public {  -> the access modifier is public in both the function which is a default modifier. there are other access modifiers as well.
-         counter++;
-      }
-
-      function subtract() public {
-         counter--;
-      }
-
-      function getcounter() public constant returns(uint256) {
-      			return counter; -> no gas is required for returning a function 
-      }
-
-
-create button 
-functions appear.
-click on getcounter
-click add and then click on getcounter
-click subtract and click on getcounter
-
-go to blockexplorer
-
-
 everything is visible.
 
 Dapps -> set of smart contracts that operate on the data stored in those contracts.
@@ -169,3 +144,13 @@ Does your smart contract and the parameters behave as expected??
 and those conditions need to be followed in a proper order. It should be checked if any condition is getting followed wihout the previous condition being properly followed. 
 
 For example, balance should be deducted only when the previous condition is met. and when the amount is sent to the receiver. 
+
+
+PS: I have taken help from different videos, links to understand the topic completely and write. The references are given below:
+1. https://www.youtube.com/watch?v=58yeu6HtzpM
+2. https://conference.hitb.org/hitbsecconf2018ams/materials/D1T2%20-%20Bernhard%20Mueller%20-%20Smashing%20Ethereum%20Smart%20Contracts%20for%20Fun%20and%20ACTUAL%20Profit.pdf
+3. https://hackernoon.com/hackpedia-16-solidity-hacks-vulnerabilities-their-fixes-and-real-world-examples-f3210eba5148
+4. https://hackernoon.com/ethereum-for-dummies-af5aeacb13d4
+5. https://hackernoon.com/getting-deep-into-ethereum-how-data-is-stored-in-ethereum-e3f669d96033
+6. https://arvanaghi.com/blog/reversing-ethereum-smart-contracts/
+7. http://patrickventuzelo.com/wp-content/uploads/2018/10/Toorcon_2018_reversing_ETH_smart_contract.pdf
