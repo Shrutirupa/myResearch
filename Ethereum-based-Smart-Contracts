@@ -41,12 +41,14 @@ The entire platform runs over Ethereum Virtual Machine(EVM) which is a turing co
 So, EVM runs on Ethereum network and hence, any program can be run irrespective of the programming language.
 Basically these contracts are written in contract specific programming language and are then compiled into bytecode, which can be read and executed by the EVM. 
 
-Working:
-A user requests 2 ethers from the sender. the sender initiates a transaction message code and must pay for each step of the program that they activated including the computations and the memory storage. 
-this fee is paid in ethers, which is taken from the wallet of the sender. 
-the transaction fee is collected by the nodes in the network that runs the evm.
-Each and every node of the network  runs the EVM to execute the same instructions. this is how blockchain is maintained and updated with the many nodes connected in the network. These nodes are the miner nodes that execute and verify the transactions that update the state of the accounts in the ethereum blockchain. they are rewarded with ethers for succesful mining.
-Once done, the user received 2 ethers in his wallet. 
+Next we are going to understand the working of a smart contract on the Ethereum platform. So, when a sender initiates a transaction, a message code gets executed as well and hence,
+as a result we need to pay for each step of the program that gets activated including the computations and the memory storage.
+This is paid in ethers and taken from the sender's wallet.
+This transaction fee gets collected by every miner node within the network. Basically every node within the network runs the EVM to execute the same instructions.
+So the miner nodes execute and verfiy the transaction and once verified, the state of the accounts get updated in the ethereum blockchain. Miners are rewarded for every successful mining.
+And this is how, a transaction gets completed. 
+
+----------------------------------------------------------------------------------------------------------------------------------------
 
 if EVM is running the application, then whats preventing the piece of code from running  forever and not overloading the network.?
 ethereum gas is the execution fee that the sender pays for running a program on the EVM. it acts as a crypto fuel driving the execution in the smart contract.
