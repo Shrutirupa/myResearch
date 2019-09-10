@@ -1,6 +1,3 @@
-This post consists of the notes that I made related to Ethereum based Smart Contracts. I have also exact terms or sentences for defining 
-few terminologies or functionalities as that version was quite understandable for me. 
-
 Ethereum is an open-source, public blockchain platform introducing for the very first time, to the concept of "Smart Contracts". The white paper is written by Vitalik Buterin.
 It was thought that why should blockchain be used only for financial transactions. So the practical usage of the blockchain applications has been increased.
 The platform allows decentralised apps to be built on it with the help of these Contracts. Smart Contracts basically provide an if-not-this-else-that kind of situations to find a solution to a problem. 
