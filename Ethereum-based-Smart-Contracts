@@ -30,16 +30,16 @@ contract accounts: autonomous in nature.
 Users are able to create Smart Contracts by deploying their code (written in Solidity/Viper etc) in the blockchain. 
 Also smart contracts are immutable pieces of code. Once deployed on the blockchain and run, they act as self operating computer programs, which automatically executes when specific conditions are met. 
 
-These contracts are written in contract specific language called solidity, vyper. We would be talking about solidity. 
+These contracts are written in contract specific language called solidity or vyper. We would be talking about solidity. 
 We needed to have a specific contract oriented language and not already existing ones such as C because the aim is to implement smart contracts on the EVM(Ethereum Virtual Machine) for further execution of the code.
 So adding any mainstream language might not add value to it. Other than that it costs money for executing instructions so a mainstream language may cost a lot so a specific language focussing on only smart contract will make sure to use only those instructions which can cost less.
 Other than that,there are security requirements as these codes are once deployed, can't be changed again.
 
-for development of smart contracts, online browser based IDE "remix" will be useful as it has an integrating  debugging and testing environment. A new line of code added in the IDE gets compiled automatically. We can specify the compiler versions as well.. 
-We have an environment that we can set, amount of ethers, account address, gas limit to be mentioned and the value in weis. 
+There is an online IDE i.e. Remix for wrirint smart contracts. This online IDE can compile the contracts automatically as it has an integrating, debugging and testing environment.
 
-EVM: turing complete software, runs on Ethereum network. enables anyone to run the program irrespective of the programming language.
-Basically contracts written in contract specific programming language are compiled into bytecode, which can be read and executed by the EVM. 
+The entire platform runs over Ethereum Virtual Machine(EVM) which is a turing complete software (partially as we can not afford EVM to solve all kinds of computations as it may cost a lot)
+So, EVM runs on Ethereum network and hence, any program can be run irrespective of the programming language.
+Basically these contracts are written in contract specific programming language and are then compiled into bytecode, which can be read and executed by the EVM. 
 
 Working:
 A user requests 2 ethers from the sender. the sender initiates a transaction message code and must pay for each step of the program that they activated including the computations and the memory storage. 
