@@ -1,4 +1,5 @@
-This post consists of all information that I know about the subject and what I understand. 
+This post consists of the notes that I made related to Ethereum based Smart Contracts. I have also exact terms or sentences for defining 
+few terminologies or functionalities as that version was quite understandable for me. 
 
 Ethereum is an open-source, public blockchain platform introducing for the very first time, to the concept of "Smart Contracts". The white paper is written by Vitalik Buterin.
 It was thought that why should blockchain be used only for financial transactions. So the practical usage of the blockchain applications has been increased.
@@ -37,62 +38,36 @@ This transaction fee gets collected by every miner node within the network. Basi
 So the miner nodes execute and verfiy the transaction and once verified, the state of the accounts get updated in the ethereum blockchain. Miners are rewarded for every successful mining.
 And this is how, a transaction gets completed. 
 
-----------------------------------------------------------------------------------------------------------------------------------------
+Now, we will be getting into a bit more detail on how is the piece of code not running forever and hence, clogging the network. 
+That's the beauty of the fuel i.e gas which is the execution fee that the sender has to pay for running a program on the EVM. Basically, every contract has to follow
+a gas limit depending on the amount of gas that can be consumed. This gas limit and the price are specified when the transaction is very first initiated.
+In case the program requires more gas than the specified amount, the program gets reverted and also the gas is lost. So, the limit has to be set prooperly
+and proper instructions should be used to avoid high cost.
 
-if EVM is running the application, then whats preventing the piece of code from running  forever and not overloading the network.?
-ethereum gas is the execution fee that the sender pays for running a program on the EVM. it acts as a crypto fuel driving the execution in the smart contract.
-every contract has to follow a gas limit which is the maximum amount of gas that can be consumed.
-ethgasstation in google. click on the first link. 
-
-gas price is specified at the start of initiating a transaction. 
-if the program requires more gas than the amount specified, the program may get reverted and also the gas will be lost. 
-
-Deploying smart contracts:
-
-
-
-everything is visible.
-
-Dapps -> set of smart contracts that operate on the data stored in those contracts.
-dapp has to fulfil the following conditions:
+There is another concept behind Ethereum blockchain where one can create Dapps(Decentralised Applications), 
+which are a set of smart contracts operating on the data in those contracts.
+These are basically applications(Eg. web/mobile) at the front end and they have blockchain in the backend along with other database. 
+So, a Dapp has to fulfil the following conditions:
 1. opensource
 2. decentralised
 3. tokens fueling for itself
 4. generates token
 5. inbuilt consensus mechanism
 
-These dapps(decentralised application) enable direct interaction between users and providers
-these are comprised of various organisations that work together to create an application.
-these organisations are decentralised autonomous organisations (dao). very similar to a normal company where there is a third party and rules are not enforced digitally
-but DAOs make their decisions electronically through the codes written in the smart contract or through the vote of the members. 
+These Dapps actually enable a direct interaction between the users and providers. 
+And also comprised of different organisations working together to create one. They are called DAO( Decentralised Autonomous Organisations)
+DAOs can be compared to a normal company where there is a third party but rules are not enforced digitally. 
+But DAOs tend to make their decisions electronically through the codes written in smart contract or through members' votes.
+So, basically people add funds to the DAO and are given tokens to represent their percentage of assets. When DAO starts to operate, members
+propose on how to spend the funds and based on the votes, the proposal status is decided. 
 
-people add funds to the DAO and are given tokens to represent their percentage of assets.
-more investment more tokens one would hold
-when DAO begins to operate, members propose how to spend the funds and based on votes the proposal status is decided. hence no third party is there to be dependant on. 
-examples: WEIfund,4G capital, storj.io, kyc-chain.
-
-
-
-Now, being immutable, it is important to take care of the security of the smart contracts as once the contract is deployed, nothing can be changed. 
-Following are the points that should be taken into consideration:
-1. is the data public? 
-   - setting up the visibility of the state variables
-   		There are four visibilities of state variables : 
-   		public(accessible within the contracts, derived contracts,external parties, an automatic getter is generated so publically accessible), 
-   		internal(visibility within the contracts and also the derived ones, no getters are generated for external accessibility), 
-   		private(visible exclusively in the contract and not in derived contracts), 
-   		external
+Next, after understanding some basics, we are going to look into the security aspects for the Smart Contracts. 
+Being immutable, it is very important to take care of the Contract as once it is deployed, one can never undo it. 
+You may need to create fork out of it in that situation.
+So, we will look into different kinds of vulnerabilities, a contract can be attacked by. 
 
 
-Note: private and internal prevents other contracts from accessing and modifying the state variable but is still visible outside the blockchain
-The values in Ethereum state tree are stored in bytes32-hex values which are 64 characters long, corresponding to 32 bytes of storage
 
-Lets deal with the smartness of the contracts:
-Does your smart contract and the parameters behave as expected??
--> A smart contract consists of code which should be having certain conditions to be fulfilled 
-and those conditions need to be followed in a proper order. It should be checked if any condition is getting followed wihout the previous condition being properly followed. 
-
-For example, balance should be deducted only when the previous condition is met. and when the amount is sent to the receiver. 
 
 
 PS: I have taken help from different videos, links to understand the topic completely and write. The references are given below:
