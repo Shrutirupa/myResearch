@@ -10,21 +10,16 @@ Why do we need to have Smart Contracts?
 What is EVM(Ethereum Virtual Machine)
 What is gas, soldidity, ether, token and many more
 
-What is Ethereum?
-Ethereum is a open-source, public blockchain platform introducing for the very first time, to the concept of "Smart Contracts". The white paper is written by Vitalik Buterin.
-It was thought that why should blockchain be used only for financial transactions. So the practical usage of the blockchain applications has been increased.
-Why do we have to come up with the idea of Ethereum???
-blockchain could be used for various used cases instead of just focussing on financial transactions.
-Ethreum maximises the usage of practical blockchain applications
-Ethreum is an open source distributed platform allowing decentralising apps to be built on it with the help of Smart Contracts. Made by Vitalik 
-give an analogy: renting house. whenever the distributed network is updated due to the smart contract where code execution occurs
 
-how ethereum differs from bitcoin:
-bitcoin aims at decentalised money not governed by anyone. bitcoin comes under blockchain 1.0- 1st generation of blockchain
-ethereum extends itself a bit more than just a cryptocurrency. Ethereum comes under blockchain 2.0- 2nd generation of blockchain
-bitcoin is turing incomplete, simple stack based language while ethereum is tuing complete - can solve any computational problem given time and energy
-bitcoin uses sha256, ethereum uses ethash , will use proof of stake, miners are chosen based on how wealthy.
-ethereum was released through ico raised coins for cryptocurrency.
+Ethereum is an open-source, public blockchain platform introducing for the very first time, to the concept of "Smart Contracts". The white paper is written by Vitalik Buterin.
+It was thought that why should blockchain be used only for financial transactions. So the practical usage of the blockchain applications has been increased.
+The platform allows decentralised apps to be built on it with the help of these Contracts. Smart Contracts basically provide an if-not-this-else-that kind of situations to find a solution to a problem. 
+The piece of code written in Solidity (there are other languages as well) helps in writing the smart contract for Ethereum based platform.
+Ethereum comes under blockchain 2.0 which is 2 nd generation of blockchain. This was the beginning of the era of Smart Contracts. 
+ps: bitcoins belonging to the 1st generation of blockchain (blockchain 1.0)
+
+So in gist, ethereum is much more than just a cryptocurrency, but turing complete - i.e. it can solve any computational problem given time and energy
+
 
 types of ethereum accounts:
 externally owned : owned by people or organisations. controlled by private keys
@@ -65,44 +60,7 @@ if the program requires more gas than the amount specified, the program may get 
 
 Deploying smart contracts:
 
-test environment will be created in the ubuntu os.
-open terminal
-to run network, we need server so we need to install nodejs and npm as nodejs will simulate the server into our local machine.
-npm is command line interface program to run the nodejs libraries.
-sudo apt install nodejs
-sudo apt install npm
-nodejs --version
-npm --version
-we need newer version. 
-sudo apt install curl (transfers data from the server)
-curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
-sudo apt install nodejs
-sudo npm upgrade npm -g 
 
-we need to run testrpc on our terminal to deploy and test our blockchain contract.
-testrpc is nodejs based ethereum client for testing and development
-so we need to create a testrpc client. 
-sudo npm install -g ganache-cli   sudo is used for the user to have authority over the files. 
-ganache cli works only on nodejs versions greater than 6.1
-sudo npm install -g ethereumjs-testrpc
--> with this command we will add all node packages in our local machine. 
-testrpc 
-
-we will be able to see the accounts and private keys.
-open new terminal 
-install blockexplorer to help us keep track of the information on the blockchain
-we need to install git which is a distributed version control system which holds the repository of our block explorer here
-sudo apt install git
-git clone https://github.com/etherparty/explorer	-> repository of the cloud into our system
-cd explorer
-lauching blockexplorer -> sudo npm start -> it will install all the packages into our system
-go to the web browser and type the url in the above url that we got
--> all the transactions are recorded in the block explorer
-
-go to remix ide to write the code:
-go to run: web3 provided
-click ok to connect to an ethereum node (in case of issue, run unsafe scripts)
-the associated accounts match with the accounts shown in testrpc
 
 everything is visible.
 
