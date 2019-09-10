@@ -1,16 +1,5 @@
 This post consists of all information that I know about the subject and what I understand. 
 
-The Flow that I will be following is :
-What is Ethereum?
-Why have we come up with the thought of Ethereum?
-What are Accounts?
-Different types of Ethereum Accounts
-What are Smart Contracts?
-Why do we need to have Smart Contracts?
-What is EVM(Ethereum Virtual Machine)
-What is gas, soldidity, ether, token and many more
-
-
 Ethereum is an open-source, public blockchain platform introducing for the very first time, to the concept of "Smart Contracts". The white paper is written by Vitalik Buterin.
 It was thought that why should blockchain be used only for financial transactions. So the practical usage of the blockchain applications has been increased.
 The platform allows decentralised apps to be built on it with the help of these Contracts. Smart Contracts basically provide an if-not-this-else-that kind of situations to find a solution to a problem. 
@@ -35,7 +24,7 @@ We needed to have a specific contract oriented language and not already existing
 So adding any mainstream language might not add value to it. Other than that it costs money for executing instructions so a mainstream language may cost a lot so a specific language focussing on only smart contract will make sure to use only those instructions which can cost less.
 Other than that,there are security requirements as these codes are once deployed, can't be changed again.
 
-There is an online IDE i.e. Remix for wrirint smart contracts. This online IDE can compile the contracts automatically as it has an integrating, debugging and testing environment.
+There is an online IDE i.e. Remix for writing smart contracts. This online IDE can compile the contracts automatically as it has an integrating, debugging and testing environment.
 
 The entire platform runs over Ethereum Virtual Machine(EVM) which is a turing complete software (partially as we can not afford EVM to solve all kinds of computations as it may cost a lot)
 So, EVM runs on Ethereum network and hence, any program can be run irrespective of the programming language.
