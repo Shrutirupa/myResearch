@@ -20,22 +20,20 @@ ps: bitcoins belonging to the 1st generation of blockchain (blockchain 1.0)
 
 So in gist, ethereum is much more than just a cryptocurrency, but turing complete - i.e. it can solve any computational problem given time and energy
 
+Every cryptocurrency and blockchain platform has an account through which one can send/receive ethers. So, Accounts can be thought of simply as private key/address pairs. 
+There are two types of ethereum accounts:
+externally owned : owned by people or organisations.
+                   controlled by private keys
+contract accounts: autonomous in nature. 
+                   controlled by code. (smart contracts) - triggered due to other external accounts or other smart contracts.
 
-types of ethereum accounts:
-externally owned : owned by people or organisations. controlled by private keys
-contract accounts: autonomous in nature. controlled by code. (smart contracts) - triggered due to other external accounts or other smart contracts.
+Users are able to create Smart Contracts by deploying their code (written in Solidity/Viper etc) in the blockchain. 
+Also smart contracts are immutable pieces of code. Once deployed on the blockchain and run, they act as self operating computer programs, which automatically executes when specific conditions are met. 
 
-users can create smart contracts by deploying code in the blockchain. 
-smart contracts are immutable pieces of code. once deployed on the blockchain and run, they act as self operating computer programs, which automatically executes when specific conditions are met. 
-
-these contracts are written in contract specific language called solidity, vyper. We would be talking about solidity. 
-
-why not already existing language?
-contract oriented languages' main aim is to implement smart contracts on the EVM for further execution of the code. 
-solidity syntax is similar to javascript
-it was developed cuz using the mainstream language on a blockchain would not really add value. also there are security requirements.
-as these codes once deployed, can't be changed again, so there is no concept of bug fixing. 
-also it costs money for executing instructions, so using C or any other language may result into huge costs for instructions(expensive contracts) that are run, and would not be easily understood as well.
+These contracts are written in contract specific language called solidity, vyper. We would be talking about solidity. 
+We needed to have a specific contract oriented language and not already existing ones such as C because the aim is to implement smart contracts on the EVM(Ethereum Virtual Machine) for further execution of the code.
+So adding any mainstream language might not add value to it. Other than that it costs money for executing instructions so a mainstream language may cost a lot so a specific language focussing on only smart contract will make sure to use only those instructions which can cost less.
+Other than that,there are security requirements as these codes are once deployed, can't be changed again.
 
 for development of smart contracts, online browser based IDE "remix" will be useful as it has an integrating  debugging and testing environment. A new line of code added in the IDE gets compiled automatically. We can specify the compiler versions as well.. 
 We have an environment that we can set, amount of ethers, account address, gas limit to be mentioned and the value in weis. 
