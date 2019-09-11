@@ -82,10 +82,10 @@ The above is an example of integer underflow.
 
 3. Function Visibilities
    There are specifiers that define the visibility of the function. These specifiers define how a function should be called. Basically if a function is specified with the public keyword, it can be called by any external contract. There are four specifies: 
-   -> pubilc
-   -> external
-   -> private
-   -> internal
+   ->[] pubilc
+   ->[] external
+   ->[] private
+   ->[] internal
 
 If the visibility of the function is not defined explicitly, it is set to public as default. And this can actually allow a malicious unknown contract to call the victim contract. 
    
