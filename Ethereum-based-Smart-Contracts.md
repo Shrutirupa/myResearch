@@ -80,6 +80,22 @@ The above is an example of integer underflow.
 			 = 1
 
 
+3. Function Visibilities
+
+4. Short address
+
+5. Rcae condition
+
+6. Unchecked call return values
+
+7. tx.origin
+
+8. block.timestamp
+
+
+
+
+
 
 PS: I have taken help from different videos, links to understand the topic completely and write. The references are given below:
 1. [Edureka](https://www.youtube.com/watch?v=58yeu6HtzpM)
