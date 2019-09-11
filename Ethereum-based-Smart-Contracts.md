@@ -65,7 +65,10 @@ So, we will look into different kinds of vulnerabilities, a contract can be atta
 
 1. Reentrancy Attack
    As the name suggests, this attack is possible when a malicious user or code is able to reenter the function continuously until and      unless either the ether is over or the gas is trained out. Here another terminology comes into picture which is a fallback function.    A fallback function is triggered when the function signature does not match any of the available functions in a Solidity Contract. 
-   So when a victim contract sends ether to an unknown address. This unknown address can be a malicious one. So, the attacker can construct a contract at an external address which has a malicious code in the fallback function, defined above. So, if the victim sends ethers to the malicious address, the malicoius code gets executed, the code is present in the fallback function. and hence the function is executed on victim contract. 
+   So when a victim contract sends ether to an unknown address. This unknown address can be a malicious one. So, the attacker can       construct a contract at an external address which has a malicious code in the fallback function, defined above. So, if the victim sends ethers to the malicious address, the malicoius code gets executed, the code is present in the fallback function. and hence the function is executed on victim contract. For example, call is a function which is used to invoke a function of other contract. But there is a catch. call can trigger a code execution without a gas limit unless it is set manually. This makes it vulnerable to reentrancy attack.
+
+2. Arithmetic Overflow/Underflow
+
 
 
 
