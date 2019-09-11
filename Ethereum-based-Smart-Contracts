@@ -63,12 +63,15 @@ Being immutable, it is very important to take care of the Contract as once it is
 You may need to create fork out of it in that situation.
 So, we will look into different kinds of vulnerabilities, a contract can be attacked by. 
 
+1. Reentrancy Attack
+   As the name suggests, this attack is possible when a malicious user or code is able to reenter the function continuously until and unless 
+   either the ether is over or the gas is trained out. 
 
 
 
 
 PS: I have taken help from different videos, links to understand the topic completely and write. The references are given below:
-1. https://www.youtube.com/watch?v=58yeu6HtzpM
+1. [(https://www.youtube.com/watch?v=58yeu6HtzpM)] 
 2. https://conference.hitb.org/hitbsecconf2018ams/materials/D1T2%20-%20Bernhard%20Mueller%20-%20Smashing%20Ethereum%20Smart%20Contracts%20for%20Fun%20and%20ACTUAL%20Profit.pdf
 3. https://hackernoon.com/hackpedia-16-solidity-hacks-vulnerabilities-their-fixes-and-real-world-examples-f3210eba5148
 4. https://hackernoon.com/ethereum-for-dummies-af5aeacb13d4
