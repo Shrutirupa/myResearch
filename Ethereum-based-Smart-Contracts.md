@@ -22,7 +22,7 @@ We needed to have a specific contract oriented language and not already existing
 So adding any mainstream language might not add value to it. Other than that it costs money for executing instructions so a mainstream language may cost a lot so a specific language focussing on only smart contract will make sure to use only those instructions which can cost less.
 Other than that,there are security requirements as these codes are once deployed, can't be changed again.
 
-There is an online IDE i.e. Remix for writing smart contracts. This online IDE can compile the contracts automatically as it has an integrating, debugging and testing environment.
+There is an online IDE i.e. [Remix](https://remix.ethereum.org) for writing smart contracts. This online IDE can compile the contracts automatically as it has an integrating, debugging and testing environment.
 
 The entire platform runs over Ethereum Virtual Machine(EVM) which is a turing complete software (partially as we can not afford EVM to solve all kinds of computations as it may cost a lot)
 So, EVM runs on Ethereum network and hence, any program can be run irrespective of the programming language.
@@ -71,7 +71,7 @@ So, we will look into different kinds of vulnerabilities, a contract can be atta
 
 
 PS: I have taken help from different videos, links to understand the topic completely and write. The references are given below:
-1. *[Edureka](https://www.youtube.com/watch?v=58yeu6HtzpM)
+1. [Edureka](https://www.youtube.com/watch?v=58yeu6HtzpM)
 2. https://conference.hitb.org/hitbsecconf2018ams/materials/D1T2%20-%20Bernhard%20Mueller%20-%20Smashing%20Ethereum%20Smart%20Contracts%20for%20Fun%20and%20ACTUAL%20Profit.pdf
 3. https://hackernoon.com/hackpedia-16-solidity-hacks-vulnerabilities-their-fixes-and-real-world-examples-f3210eba5148
 4. https://hackernoon.com/ethereum-for-dummies-af5aeacb13d4
