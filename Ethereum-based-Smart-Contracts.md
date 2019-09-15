@@ -90,11 +90,15 @@ The above is an example of integer underflow.
 If the visibility of the function is not defined explicitly, it is set to public as default. And this can actually allow a malicious unknown contract to call the victim contract. 
    
 4. Short address
-
-5. Rcae condition
-
+   Parameters being sent to a smart contract can be manpulated as these parameters get encoded according to ABI specification. So, in that case if an attacker is withdrawing some ether from the victim contract to it's account whose address may be of 19 bytes instead of 20, then 00 will be padded to the end of the encoding, and hence may be manupulated. 
+   The encoding follows the following way:
+   function name + address + encoded value + (any padding if required)
+   if x amount of ether is to be withdrawn from the victim's address, and the above scenario is followed, the entired padding would be like  function name + address + x + 00
+   So, it will result into withdrawal of x times 100 ethers from the victim's account.
+5. Race condition
+   Miners can do take advantage of their power into looking into the secret answers which are not supposed to be seen but found out byt solving a mathematical computation, as the code demands. if there is a reward which would be given to the nodes within the network to solve a mathematical problem, and one of the nodes, solve the problem, the malicious miner may see the answer before verifying and it may directly update it's answer and get it verified fast.This comes under race condition which should be taken care of.
 6. Unchecked call return values
-
+   EVM has a resource called callstack which is used by the contrat code during it's execution. So there can be a possibility of a previously existing contract code consuming the call stack and hence a function may not get executed. send() function can be a dangerous one in this scenario where the function may get reverted as it only returns boolean values but the state of the variable still get changed. so instead of send(), transfer() function should be used.
 7. tx.origin
 
 8. block.timestamp
